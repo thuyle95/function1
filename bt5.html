@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo"></p>
+    <script>
+        let inputValue = prompt('Nhập ngôi sao bất kỳ: ');
+        findStar(inputValue);
+        function findStar(inputValue) {
+            let stars = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+            let stars2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+            let index = 0;
+            let foundKey = -1;
+            while (index < stars.length) {
+                if (stars[index] == inputValue) {
+                    foundKey = index;
+                }
+                index++;
+            }
+            if (foundKey > -1) {
+                document.write(stars2[foundKey]);
+            } else {
+                document.write('Không tìm thấy');
+            }
+
+        }
+    </script>
+</body>
+
+</html>
